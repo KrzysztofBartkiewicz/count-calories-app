@@ -4,7 +4,7 @@ import Button from '../../components/button';
 
 const Homepage = (props) => {
   return (
-    <main>
+    <main className='homepage'>
       <Button />
     </main>
   );
