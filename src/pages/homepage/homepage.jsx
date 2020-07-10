@@ -1,10 +1,10 @@
 import React from 'react';
 import './homepage.scss';
-import Button from '../../components/button';
+import Button from '../../components/button/button';
 
 const Homepage = (props) => {
   return (
-    <main className='homepage'>
+    <main className="homepage">
       <Button />
     </main>
   );
