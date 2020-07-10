@@ -1,0 +1,29 @@
+@import '../styles/variables';
+
+.button {
+  width: 315px;
+  background-color: $primary-color;
+  color: $background-color;
+  border: none;
+  border-radius: 36px;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__icon {
+    display: block;
+    width: 18px;
+    height: 18px;
+  }
+
+  &__text {
+    padding-left: 10px;
+  }
+
+  &--search {
+    & .button__icon {
+      background-image: url(../assets/icon-search.svg);
+    }
+  }
+}
