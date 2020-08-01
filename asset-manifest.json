@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/count-calories-app/static/css/main.4089399a.chunk.css",
-    "main.js": "/count-calories-app/static/js/main.2f2881fc.chunk.js",
-    "main.js.map": "/count-calories-app/static/js/main.2f2881fc.chunk.js.map",
+    "main.js": "/count-calories-app/static/js/main.bcd7d3b7.chunk.js",
+    "main.js.map": "/count-calories-app/static/js/main.bcd7d3b7.chunk.js.map",
     "runtime-main.js": "/count-calories-app/static/js/runtime-main.3e1bd4fa.js",
     "runtime-main.js.map": "/count-calories-app/static/js/runtime-main.3e1bd4fa.js.map",
     "static/js/2.acbf5b58.chunk.js": "/count-calories-app/static/js/2.acbf5b58.chunk.js",
     "static/js/2.acbf5b58.chunk.js.map": "/count-calories-app/static/js/2.acbf5b58.chunk.js.map",
     "index.html": "/count-calories-app/index.html",
-    "precache-manifest.e3e9f5af3092d9ed471f04fc345f6cdd.js": "/count-calories-app/precache-manifest.e3e9f5af3092d9ed471f04fc345f6cdd.js",
+    "precache-manifest.4541a62eeac8816f54c51d1fade66113.js": "/count-calories-app/precache-manifest.4541a62eeac8816f54c51d1fade66113.js",
     "service-worker.js": "/count-calories-app/service-worker.js",
     "static/css/main.4089399a.chunk.css.map": "/count-calories-app/static/css/main.4089399a.chunk.css.map",
     "static/js/2.acbf5b58.chunk.js.LICENSE.txt": "/count-calories-app/static/js/2.acbf5b58.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.3e1bd4fa.js",
     "static/js/2.acbf5b58.chunk.js",
     "static/css/main.4089399a.chunk.css",
-    "static/js/main.2f2881fc.chunk.js"
+    "static/js/main.bcd7d3b7.chunk.js"
   ]
 }
