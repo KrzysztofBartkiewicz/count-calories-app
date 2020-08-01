@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/count-calories-app/static/css/main.4089399a.chunk.css",
-    "main.js": "/count-calories-app/static/js/main.bdd7bd0c.chunk.js",
-    "main.js.map": "/count-calories-app/static/js/main.bdd7bd0c.chunk.js.map",
+    "main.js": "/count-calories-app/static/js/main.d4e6ef13.chunk.js",
+    "main.js.map": "/count-calories-app/static/js/main.d4e6ef13.chunk.js.map",
     "runtime-main.js": "/count-calories-app/static/js/runtime-main.3e1bd4fa.js",
     "runtime-main.js.map": "/count-calories-app/static/js/runtime-main.3e1bd4fa.js.map",
-    "static/js/2.9d55122e.chunk.js": "/count-calories-app/static/js/2.9d55122e.chunk.js",
-    "static/js/2.9d55122e.chunk.js.map": "/count-calories-app/static/js/2.9d55122e.chunk.js.map",
+    "static/js/2.3a44db12.chunk.js": "/count-calories-app/static/js/2.3a44db12.chunk.js",
+    "static/js/2.3a44db12.chunk.js.map": "/count-calories-app/static/js/2.3a44db12.chunk.js.map",
     "index.html": "/count-calories-app/index.html",
-    "precache-manifest.91e000a2f7b6ee33f1413501fcdece86.js": "/count-calories-app/precache-manifest.91e000a2f7b6ee33f1413501fcdece86.js",
+    "precache-manifest.2b796cd48f89bb2b2285e70e21ca37c6.js": "/count-calories-app/precache-manifest.2b796cd48f89bb2b2285e70e21ca37c6.js",
     "service-worker.js": "/count-calories-app/service-worker.js",
     "static/css/main.4089399a.chunk.css.map": "/count-calories-app/static/css/main.4089399a.chunk.css.map",
-    "static/js/2.9d55122e.chunk.js.LICENSE.txt": "/count-calories-app/static/js/2.9d55122e.chunk.js.LICENSE.txt",
+    "static/js/2.3a44db12.chunk.js.LICENSE.txt": "/count-calories-app/static/js/2.3a44db12.chunk.js.LICENSE.txt",
     "static/media/button.scss": "/count-calories-app/static/media/icon-search.ae08c1ab.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.3e1bd4fa.js",
-    "static/js/2.9d55122e.chunk.js",
+    "static/js/2.3a44db12.chunk.js",
     "static/css/main.4089399a.chunk.css",
-    "static/js/main.bdd7bd0c.chunk.js"
+    "static/js/main.d4e6ef13.chunk.js"
   ]
 }
