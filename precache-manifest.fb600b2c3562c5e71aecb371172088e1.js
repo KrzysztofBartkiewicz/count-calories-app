@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fb540bd1341bd14149d4ffbea0dba4f8",
+    "revision": "cecd4ee110a7bee56d0b76107ec12d41",
     "url": "/count-calories-app/index.html"
   },
   {
-    "revision": "c8f64d07ecdba82c3fa3",
+    "revision": "6d6cc3a6cb1577733c2c",
     "url": "/count-calories-app/static/css/main.4089399a.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/count-calories-app/static/js/2.3a44db12.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c8f64d07ecdba82c3fa3",
-    "url": "/count-calories-app/static/js/main.d4e6ef13.chunk.js"
+    "revision": "6d6cc3a6cb1577733c2c",
+    "url": "/count-calories-app/static/js/main.87356ba9.chunk.js"
   },
   {
     "revision": "d283bc289f7202102d6a",
