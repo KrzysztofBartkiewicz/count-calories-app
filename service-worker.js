@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/count-calories-app/precache-manifest.885a7a4b2f6a9770f1373c29c4277e48.js"
+  "/count-calories-app/precache-manifest.91e000a2f7b6ee33f1413501fcdece86.js"
 );
 
 self.addEventListener('message', (event) => {
