@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/count-calories-app/static/css/main.4089399a.chunk.css",
-    "main.js": "/count-calories-app/static/js/main.cd0b1beb.chunk.js",
-    "main.js.map": "/count-calories-app/static/js/main.cd0b1beb.chunk.js.map",
+    "main.js": "/count-calories-app/static/js/main.2f2881fc.chunk.js",
+    "main.js.map": "/count-calories-app/static/js/main.2f2881fc.chunk.js.map",
     "runtime-main.js": "/count-calories-app/static/js/runtime-main.3e1bd4fa.js",
     "runtime-main.js.map": "/count-calories-app/static/js/runtime-main.3e1bd4fa.js.map",
-    "static/js/2.3a44db12.chunk.js": "/count-calories-app/static/js/2.3a44db12.chunk.js",
-    "static/js/2.3a44db12.chunk.js.map": "/count-calories-app/static/js/2.3a44db12.chunk.js.map",
+    "static/js/2.acbf5b58.chunk.js": "/count-calories-app/static/js/2.acbf5b58.chunk.js",
+    "static/js/2.acbf5b58.chunk.js.map": "/count-calories-app/static/js/2.acbf5b58.chunk.js.map",
     "index.html": "/count-calories-app/index.html",
-    "precache-manifest.edc7f8a7f81530798fee8c656774193d.js": "/count-calories-app/precache-manifest.edc7f8a7f81530798fee8c656774193d.js",
+    "precache-manifest.e3e9f5af3092d9ed471f04fc345f6cdd.js": "/count-calories-app/precache-manifest.e3e9f5af3092d9ed471f04fc345f6cdd.js",
     "service-worker.js": "/count-calories-app/service-worker.js",
     "static/css/main.4089399a.chunk.css.map": "/count-calories-app/static/css/main.4089399a.chunk.css.map",
-    "static/js/2.3a44db12.chunk.js.LICENSE.txt": "/count-calories-app/static/js/2.3a44db12.chunk.js.LICENSE.txt",
+    "static/js/2.acbf5b58.chunk.js.LICENSE.txt": "/count-calories-app/static/js/2.acbf5b58.chunk.js.LICENSE.txt",
     "static/media/button.scss": "/count-calories-app/static/media/icon-search.ae08c1ab.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.3e1bd4fa.js",
-    "static/js/2.3a44db12.chunk.js",
+    "static/js/2.acbf5b58.chunk.js",
     "static/css/main.4089399a.chunk.css",
-    "static/js/main.cd0b1beb.chunk.js"
+    "static/js/main.2f2881fc.chunk.js"
   ]
 }
