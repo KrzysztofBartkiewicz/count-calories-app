@@ -1,0 +1,29 @@
+.custom-checkbox {
+  font-size: 1.6rem;
+
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+  }
+
+  &__label::before {
+    content: '';
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 1.2rem;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+  }
+}
+
+.custom-checkbox__input:checked + .custom-checkbox__label::before {
+  background-image: url(../../assets/tick.svg);
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  background-position: center;
+  background-color: var(--primary-color);
+}
