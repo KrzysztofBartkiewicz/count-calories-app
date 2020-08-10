@@ -1,15 +1,20 @@
 .header {
-  padding: 3rem 3.6rem;
-  display: flex;
+  $paddingTB: 3rem;
+  $paddingLR: 3.6rem;
+  padding: $paddingTB $paddingLR;
+  position: relative;
 
   &__nav {
-    flex-shrink: 1;
+    position: absolute;
+    left: $paddingLR;
+    top: $paddingTB;
   }
 
   &__button {
     width: 2rem;
     height: 2rem;
     border: none;
+    margin-top: .5rem;
     background-color: transparent;
     background-image: url(../../assets/icon-arrow.svg);
     background-size: 2rem;
@@ -19,14 +24,22 @@
 
   &__text-box {
     color: var(--tertiary-color);
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center; 
   }
 
   &__main-text {
     font-size: 2rem;
     font-weight: 400;
+    margin: 0;
   }
 
   &__sub-text {
     font-size: 1.6rem;
   }
+}
+
+.hidden {
+  display: none;
 }

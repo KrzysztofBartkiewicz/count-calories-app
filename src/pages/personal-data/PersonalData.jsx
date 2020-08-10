@@ -9,7 +9,7 @@ class PersonalData extends Component {
   render() {
     return (
       <Fragment>
-        <Header mainText={'Mój profil'} />
+        <Header mainText={'Mój profil'} subText={'Something'} goBack/>
         <form className="personal-data">
           <section className="gender">
             <Heading>Płeć</Heading>
