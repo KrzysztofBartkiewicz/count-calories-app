@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-size: 10px;
 }
 
 *,
@@ -15,7 +16,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 10px;
 }
 
 code {
@@ -26,6 +26,7 @@ code {
 :root {
   --primary-color: #7BED8D;
   --secondary-color: #F0F4F8;
+  --tertiary-color: #748A9D;
   --background-color: #fff;
 }
 
