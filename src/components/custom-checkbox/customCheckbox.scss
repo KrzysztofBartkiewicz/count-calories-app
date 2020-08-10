@@ -23,7 +23,7 @@
 .custom-checkbox__input:checked + .custom-checkbox__label::before {
   background-image: url(../../assets/tick.svg);
   background-repeat: no-repeat;
-  background-size: 2rem;
+  background-size: 1rem;
   background-position: center;
   background-color: var(--primary-color);
 }
