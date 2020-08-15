@@ -1,3 +1,20 @@
 .personal-data {
   padding: 0 3.6rem;
 }
+
+.pd-section {
+  margin-bottom: 3rem;
+
+  &:first-child {
+    margin-bottom: 4rem;
+  }
+
+  &__inner {
+    margin-top: 1.8rem;
+
+    &--gender {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
