@@ -1,0 +1,25 @@
+.pd-section {
+  margin-bottom: 1.6rem;
+
+  &:first-child {
+    margin-bottom: 2.6rem;
+  }
+
+  &__inner {
+    margin-top: 1.8rem;
+
+    &--gender,
+    &--activity {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__warning {
+    display: block;
+    height: 1.4rem;
+    margin-top: .4rem;
+    font-size: 1rem;
+    color: var(--warning-color);
+  }
+}
