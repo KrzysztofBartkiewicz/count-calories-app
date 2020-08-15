@@ -18,7 +18,10 @@ class PersonalData extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    
+
+    Object.keys(this.state).forEach(key => {
+      localStorage.setItem(key, this.state[key]);
+    })
   };
 
   handleChange = (event) => {
