@@ -1,5 +1,5 @@
 .personal-data {
-  padding: 0 3.6rem;
+  padding: 0 3.6rem 2rem 3.6rem;
 }
 
 .pd-section {
@@ -12,7 +12,8 @@
   &__inner {
     margin-top: 1.8rem;
 
-    &--gender {
+    &--gender,
+    &--activity {
       display: flex;
       justify-content: space-between;
     }

@@ -28,3 +28,15 @@
   background-position: center;
   background-color: var(--primary-color);
 }
+
+.custom-checkbox__label--bottom {
+  position: relative;
+  margin-top: 3.8rem;
+}
+
+.custom-checkbox__label--bottom::before {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -3.8rem;
+}

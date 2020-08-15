@@ -1,5 +1,5 @@
 .button {
-  width: 315px;
+  width: 100%;
   background-color: var(--primary-color);
   color: var(--background-color);
   border: none;
@@ -18,11 +18,23 @@
 
   &__text {
     padding-left: 10px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
   }
 
   &--search {
     & .button__icon {
       background-image: url(../../assets/icon-search.svg);
+    }
+  }
+
+  &--save {
+    & .button__icon {
+      background-image: url(../../assets/tick.svg);
+      background-repeat: no-repeat;
+      background-size: 2rem;
+      background-position: center;
     }
   }
 }

@@ -2,10 +2,10 @@ import React from 'react';
 
 import './customTextInput.scss';
 
-const customTextInput = ({ type, value }) => {
+const CustomTextInput = ({ type, value, name, onChange }) => {
   return(
-    <input className="custom-text-input" type={type} value={value} />
+    <input className="custom-text-input" name={name} type={type} value={value} onChange={onChange} />
   )
 }
 
-export default customTextInput;
+export default CustomTextInput;
