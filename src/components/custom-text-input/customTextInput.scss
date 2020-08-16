@@ -1,8 +1,12 @@
 .custom-text-input {
-  padding: 1.3rem 2rem;
+  padding: 1rem 1.7rem;
   background-color: var(--secondary-color);
   color: var(--quaternary-color);
-  border: none;
+  border: 3px solid transparent;
   border-radius: .8rem;
   font-size: 1.6rem;
+
+  &--incorrect {
+    border: 3px solid var(--warning-color);
+  }
 }

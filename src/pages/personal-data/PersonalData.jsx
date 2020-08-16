@@ -8,6 +8,12 @@ import DataSection from '../../components/data-section/DataSection';
 
 import './personalData.scss';
 
+const reg = {
+  age: /\b(1[4-9]|[2-9][0-9]|100)\b/,
+  weight: /\b([4-8][0-9]|9[0-9]|1[0-9]{2}|200)\b/,
+  height: /\b(1[2-8][0-9]|19[0-9]|2[01][0-9]|220)\b/,
+};
+
 class PersonalData extends Component {
   state = {
     gender: 'female',
@@ -46,24 +52,24 @@ class PersonalData extends Component {
   handleChange = (event) => {
     const { name, value } = event.target;
 
-    if (name === 'age' && (value < 14 || value > 100)) {
-      this.setState({ ageWarn: 'Zakres 14 - 100' });
-    } else {
-      this.setState({ ageWarn: '' });
+    switch (name) {
+      case 'age':
+        reg.age.test(value)
+          ? this.setState({ ageWarn: '' })
+          : this.setState({ ageWarn: '14 - 100 lat' });
+        break;
+      case 'weight':
+        reg.weight.test(value)
+          ? this.setState({ weightWarn: '' })
+          : this.setState({ weightWarn: '40 - 200 kg' });
+        break;
+      case 'height':
+        reg.height.test(value)
+          ? this.setState({ heightWarn: '' })
+          : this.setState({ heightWarn: '120 - 220 cm' });
+      default:
+        break;
     }
-
-    if (name === 'weight' && (value < 40 || value > 200)) {
-      this.setState({ weightWarn: 'Zakres 40 - 200' });
-    } else {
-      this.setState({ weightWarn: '' });
-    }
-
-    if (name === 'height' && (value < 120 || value > 220)) {
-      this.setState({ heightWarn: 'Zakres 120 - 220' });
-    } else {
-      this.setState({ heightWarn: '' });
-    }
-
     this.setState({ [name]: value });
   };
 
@@ -73,13 +79,28 @@ class PersonalData extends Component {
   };
 
   render() {
+    const {
+      gender,
+      age,
+      weight,
+      height,
+      activity,
+      ageWarn,
+      weightWarn,
+      heightWarn,
+    } = this.state;
+
     return (
       <Fragment>
         <Header mainText={'Mój profil'} subText={'Something'} goBack />
-        <form className="personal-data" onSubmit={this.handleSubmit}>
+        <form
+          className="personal-data"
+          onSubmit={this.handleSubmit}
+          autoComplete="off"
+        >
           <DataSection heading={<Heading>{'Płeć'}</Heading>}>
             <CustomCheckbox
-              checked={this.state.gender === 'female'}
+              checked={gender === 'female'}
               onChange={this.handleCheck}
               id="female"
               type="radio"
@@ -88,7 +109,7 @@ class PersonalData extends Component {
               {'Kobieta'}
             </CustomCheckbox>
             <CustomCheckbox
-              checked={this.state.gender === 'male'}
+              checked={gender === 'male'}
               onChange={this.handleCheck}
               id="male"
               type="radio"
@@ -98,45 +119,45 @@ class PersonalData extends Component {
             </CustomCheckbox>
           </DataSection>
 
-          <DataSection
-            heading={<Heading>{'Wiek'}</Heading>}
-            bottom={this.state.ageWarn}
-          >
+          <DataSection heading={<Heading>{'Wiek'}</Heading>} bottom={ageWarn}>
             <CustomTextInput
-              value={this.state.age}
+              value={age}
               onChange={this.handleChange}
               type="text"
               name="age"
+              isIncorrect={ageWarn}
             />
           </DataSection>
 
           <DataSection
             heading={<Heading>{'Waga (kg)'}</Heading>}
-            bottom={this.state.weightWarn}
+            bottom={weightWarn}
           >
             <CustomTextInput
-              value={this.state.weight}
+              value={weight}
               onChange={this.handleChange}
               type="text"
               name="weight"
+              isIncorrect={weightWarn}
             />
           </DataSection>
 
           <DataSection
             heading={<Heading>{'Wzrost (cm)'}</Heading>}
-            bottom={this.state.heightWarn}
+            bottom={heightWarn}
           >
             <CustomTextInput
-              value={this.state.height}
+              value={height}
               onChange={this.handleChange}
               type="text"
               name="height"
+              isIncorrect={heightWarn}
             />
           </DataSection>
 
           <DataSection heading={<Heading>{'Aktywność'}</Heading>}>
             <CustomCheckbox
-              checked={this.state.activity === 'low'}
+              checked={activity === 'low'}
               onChange={this.handleCheck}
               id="low"
               type="radio"
@@ -146,7 +167,7 @@ class PersonalData extends Component {
               {'Niska'}
             </CustomCheckbox>
             <CustomCheckbox
-              checked={this.state.activity === 'medium'}
+              checked={activity === 'medium'}
               onChange={this.handleCheck}
               id="medium"
               type="radio"
@@ -156,7 +177,7 @@ class PersonalData extends Component {
               {'Średnia'}
             </CustomCheckbox>
             <CustomCheckbox
-              checked={this.state.activity === 'high'}
+              checked={activity === 'high'}
               onChange={this.handleCheck}
               id="high"
               type="radio"
