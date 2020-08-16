@@ -5,6 +5,7 @@ import Header from '../../components/header/Header';
 import CustomTextInput from '../../components/custom-text-input/CustomTextInput';
 import Button from '../../components/button/Button';
 import DataSection from '../../components/data-section/DataSection';
+import Modal from '../../shared/modal/Modal';
 
 import './personalData.scss';
 
@@ -24,6 +25,7 @@ class PersonalData extends Component {
     ageWarn: '',
     weightWarn: '',
     heightWarn: '',
+    showModal: false,
   };
 
   handleSubmit = (event) => {
@@ -47,6 +49,12 @@ class PersonalData extends Component {
     localStorage.setItem('weight', weight);
     localStorage.setItem('height', height);
     localStorage.setItem('activity', activity);
+
+    this.setState({ showModal: true });
+
+    setTimeout(() => {
+      this.setState({ showModal: false })
+    }, 3000);
   };
 
   handleChange = (event) => {
@@ -88,10 +96,12 @@ class PersonalData extends Component {
       ageWarn,
       weightWarn,
       heightWarn,
+      showModal,
     } = this.state;
 
     return (
       <Fragment>
+        {showModal ? <Modal message="Zapisano" /> : null}
         <Header mainText={'Mój profil'} subText={'Something'} goBack />
         <form
           className="personal-data"
@@ -123,7 +133,7 @@ class PersonalData extends Component {
             <CustomTextInput
               value={age}
               onChange={this.handleChange}
-              type="text"
+              type="number"
               name="age"
               isIncorrect={ageWarn}
             />
@@ -136,7 +146,7 @@ class PersonalData extends Component {
             <CustomTextInput
               value={weight}
               onChange={this.handleChange}
-              type="text"
+              type="number"
               name="weight"
               isIncorrect={weightWarn}
             />
@@ -149,7 +159,7 @@ class PersonalData extends Component {
             <CustomTextInput
               value={height}
               onChange={this.handleChange}
-              type="text"
+              type="number"
               name="height"
               isIncorrect={heightWarn}
             />

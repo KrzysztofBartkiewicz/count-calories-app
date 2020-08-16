@@ -1,5 +1,5 @@
 import React from 'react';
-import WarnText from '../warn-text/WarnText';
+import WarnText from '../../shared/warn-text/WarnText';
 
 import './dataSection.scss';
 
