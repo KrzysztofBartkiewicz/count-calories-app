@@ -7,19 +7,12 @@
 
   &__inner {
     margin-top: 1.8rem;
-
-    &--gender,
-    &--activity {
-      display: flex;
-      justify-content: space-between;
-    }
+    display: flex;
+    justify-content: space-between;
   }
 
-  &__warning {
-    display: block;
+  &__bottom {
     height: 1.4rem;
-    margin-top: .4rem;
-    font-size: 1rem;
-    color: var(--warning-color);
+    margin-top: 0.4rem;
   }
 }

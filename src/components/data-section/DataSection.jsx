@@ -1,15 +1,16 @@
 import React from 'react';
+import WarnText from '../warn-text/WarnText';
 
 import './dataSection.scss';
 
-const DataSection = ({ heading, children, warning }) => {
+const DataSection = ({ heading, children, bottom }) => {
   return (
     <section className="pd-section">
       {heading}
-      <div className="pd-section__inner pd-section__inner--gender">
-        {children}
+      <div className="pd-section__inner">{children}</div>
+      <div className="pd-section__bottom">
+        {bottom ? <WarnText>{bottom}</WarnText> : null}
       </div>
-      <span className="pd-section__warning">{warning}</span>
     </section>
   );
 };

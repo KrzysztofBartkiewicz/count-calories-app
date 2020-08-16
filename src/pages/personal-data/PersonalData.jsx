@@ -15,14 +15,26 @@ class PersonalData extends Component {
     weight: 90,
     height: 180,
     activity: 'low',
-    warnText: '',
-    warnTarget: ''
+    ageWarn: '',
+    weightWarn: '',
+    heightWarn: '',
   };
 
   handleSubmit = (event) => {
     event.preventDefault();
 
-    const { gender, age, weight, height, activity } = this.state;
+    const {
+      gender,
+      age,
+      weight,
+      height,
+      activity,
+      ageWarn,
+      weightWarn,
+      heightWarn,
+    } = this.state;
+
+    if (ageWarn || weightWarn || heightWarn) return;
 
     localStorage.setItem('gender', gender);
     localStorage.setItem('age', age);
@@ -34,16 +46,22 @@ class PersonalData extends Component {
   handleChange = (event) => {
     const { name, value } = event.target;
 
-    if (!(name === 'age' && value >= 14 && value <= 100)) {
-      this.setState({ ageWarn: true });
+    if (name === 'age' && (value < 14 || value > 100)) {
+      this.setState({ ageWarn: 'Zakres 14 - 100' });
     } else {
-      this.setState({ ageWarn: false });
+      this.setState({ ageWarn: '' });
     }
-    if (!(name === 'weight' && value >= 40 && value <= 200)) {
-      this.setState({ weightWarn: true });
+
+    if (name === 'weight' && (value < 40 || value > 200)) {
+      this.setState({ weightWarn: 'Zakres 40 - 200' });
+    } else {
+      this.setState({ weightWarn: '' });
     }
-    if (!(name === 'height' && value >= 120 && value <= 220)) {
-      this.setState({ heightWarn: true });
+
+    if (name === 'height' && (value < 120 || value > 220)) {
+      this.setState({ heightWarn: 'Zakres 120 - 220' });
+    } else {
+      this.setState({ heightWarn: '' });
     }
 
     this.setState({ [name]: value });
@@ -59,10 +77,7 @@ class PersonalData extends Component {
       <Fragment>
         <Header mainText={'Mój profil'} subText={'Something'} goBack />
         <form className="personal-data" onSubmit={this.handleSubmit}>
-          <DataSection
-            heading={<Heading>{'Płeć'}</Heading>}
-            warning={''}
-          >
+          <DataSection heading={<Heading>{'Płeć'}</Heading>}>
             <CustomCheckbox
               checked={this.state.gender === 'female'}
               onChange={this.handleCheck}
@@ -85,7 +100,7 @@ class PersonalData extends Component {
 
           <DataSection
             heading={<Heading>{'Wiek'}</Heading>}
-            warning={'warning'}
+            bottom={this.state.ageWarn}
           >
             <CustomTextInput
               value={this.state.age}
@@ -97,7 +112,7 @@ class PersonalData extends Component {
 
           <DataSection
             heading={<Heading>{'Waga (kg)'}</Heading>}
-            warning={'warning'}
+            bottom={this.state.weightWarn}
           >
             <CustomTextInput
               value={this.state.weight}
@@ -109,7 +124,7 @@ class PersonalData extends Component {
 
           <DataSection
             heading={<Heading>{'Wzrost (cm)'}</Heading>}
-            warning={'df'}
+            bottom={this.state.heightWarn}
           >
             <CustomTextInput
               value={this.state.height}
@@ -119,10 +134,7 @@ class PersonalData extends Component {
             />
           </DataSection>
 
-          <DataSection
-            heading={<Heading>{'Aktywność'}</Heading>}
-            warning={'warning'}
-          >
+          <DataSection heading={<Heading>{'Aktywność'}</Heading>}>
             <CustomCheckbox
               checked={this.state.activity === 'low'}
               onChange={this.handleCheck}
