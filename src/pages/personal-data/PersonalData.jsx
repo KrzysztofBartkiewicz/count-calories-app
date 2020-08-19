@@ -139,7 +139,10 @@ class PersonalData extends Component {
             </CustomCheckbox>
           </DataSection>
 
-          <DataSection heading={<Heading>{'Wiek'}</Heading>} bottom={ageWarn}>
+          <DataSection
+            heading={<Heading>{'Wiek'}</Heading>}
+            bottomText={ageWarn}
+          >
             <CustomTextInput
               value={age}
               onChange={this.handleChange}
@@ -151,7 +154,7 @@ class PersonalData extends Component {
 
           <DataSection
             heading={<Heading>{'Waga (kg)'}</Heading>}
-            bottom={weightWarn}
+            bottomText={weightWarn}
           >
             <CustomTextInput
               value={weight}
@@ -164,7 +167,7 @@ class PersonalData extends Component {
 
           <DataSection
             heading={<Heading>{'Wzrost (cm)'}</Heading>}
-            bottom={heightWarn}
+            bottomText={heightWarn}
           >
             <CustomTextInput
               value={height}
