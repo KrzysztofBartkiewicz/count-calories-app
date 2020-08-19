@@ -6,6 +6,7 @@ import CustomTextInput from '../../components/custom-text-input/CustomTextInput'
 import Button from '../../components/button/Button';
 import DataSection from '../../components/data-section/DataSection';
 import Modal from '../../shared/modal/Modal';
+import { CSSTransition } from 'react-transition-group';
 
 import './personalData.scss';
 
@@ -53,7 +54,7 @@ class PersonalData extends Component {
     this.setState({ showModal: true });
 
     setTimeout(() => {
-      this.setState({ showModal: false })
+      this.setState({ showModal: false });
     }, 3000);
   };
 
@@ -75,6 +76,7 @@ class PersonalData extends Component {
         reg.height.test(value)
           ? this.setState({ heightWarn: '' })
           : this.setState({ heightWarn: '120 - 220 cm' });
+        break;
       default:
         break;
     }
@@ -101,7 +103,15 @@ class PersonalData extends Component {
 
     return (
       <Fragment>
-        {showModal ? <Modal message="Zapisano" /> : null}
+        <CSSTransition
+          in={showModal}
+          timeout={1000}
+          classNames="my-node"
+          unmountOnExit
+        >
+          <Modal message="Zapisano" />
+        </CSSTransition>
+
         <Header mainText={'Mój profil'} subText={'Something'} goBack />
         <form
           className="personal-data"
