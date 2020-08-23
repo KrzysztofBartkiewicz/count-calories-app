@@ -26,7 +26,6 @@ class PersonalData extends Component {
     ageWarn: '',
     weightWarn: '',
     heightWarn: '',
-
     showModal: false,
   };
 
