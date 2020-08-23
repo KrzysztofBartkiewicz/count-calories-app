@@ -26,6 +26,7 @@ class PersonalData extends Component {
     ageWarn: '',
     weightWarn: '',
     heightWarn: '',
+
     showModal: false,
   };
 
@@ -34,13 +35,13 @@ class PersonalData extends Component {
 
     const {
       gender,
-      age,
-      weight,
-      height,
       activity,
       ageWarn,
       weightWarn,
       heightWarn,
+      age,
+      weight,
+      height,
     } = this.state;
 
     if (ageWarn || weightWarn || heightWarn) return;
@@ -80,7 +81,13 @@ class PersonalData extends Component {
       default:
         break;
     }
-    this.setState({ [name]: value });
+
+    this.setState(
+      {
+        [name]: value,
+      },
+      console.log('state: ', this.state, name, value)
+    );
   };
 
   handleCheck = (event) => {
@@ -91,14 +98,14 @@ class PersonalData extends Component {
   render() {
     const {
       gender,
-      age,
-      weight,
-      height,
       activity,
       ageWarn,
       weightWarn,
       heightWarn,
       showModal,
+      age,
+      weight,
+      height,
     } = this.state;
 
     return (
@@ -139,42 +146,33 @@ class PersonalData extends Component {
             </CustomCheckbox>
           </DataSection>
 
-          <DataSection
-            heading={<Heading>{'Wiek'}</Heading>}
-            bottomText={ageWarn}
-          >
+          <DataSection heading={<Heading>{'Wiek'}</Heading>}>
             <CustomTextInput
               value={age}
               onChange={this.handleChange}
               type="number"
               name="age"
-              isIncorrect={ageWarn}
+              warning={ageWarn}
             />
           </DataSection>
 
-          <DataSection
-            heading={<Heading>{'Waga (kg)'}</Heading>}
-            bottomText={weightWarn}
-          >
+          <DataSection heading={<Heading>{'Waga (kg)'}</Heading>}>
             <CustomTextInput
               value={weight}
               onChange={this.handleChange}
               type="number"
               name="weight"
-              isIncorrect={weightWarn}
+              warning={weightWarn}
             />
           </DataSection>
 
-          <DataSection
-            heading={<Heading>{'Wzrost (cm)'}</Heading>}
-            bottomText={heightWarn}
-          >
+          <DataSection heading={<Heading>{'Wzrost (cm)'}</Heading>}>
             <CustomTextInput
               value={height}
               onChange={this.handleChange}
               type="number"
               name="height"
-              isIncorrect={heightWarn}
+              warning={heightWarn}
             />
           </DataSection>
 

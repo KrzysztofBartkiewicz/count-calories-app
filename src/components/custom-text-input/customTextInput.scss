@@ -1,12 +1,22 @@
 .custom-text-input {
-  padding: 1rem 1.7rem;
-  background-color: var(--secondary-color);
-  color: var(--quaternary-color);
-  border: 3px solid transparent;
-  border-radius: .8rem;
-  font-size: 1.6rem;
+  &__input {
+    padding: 1rem 1.7rem;
+    background-color: var(--secondary-color);
+    color: var(--quaternary-color);
+    border: 3px solid transparent;
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
 
-  &--incorrect {
-    border: 3px solid var(--warning-color);
+    &--incorrect {
+      border: 3px solid var(--warning-color);
+    }
+  }
+
+  &__warning {
+    display: block;
+    font-size: 1rem;
+    color: var(--warning-color);
+    height: 1.4rem;
+    margin-top: 0.4rem;
   }
 }
