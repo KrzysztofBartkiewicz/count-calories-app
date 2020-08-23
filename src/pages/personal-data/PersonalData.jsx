@@ -29,6 +29,10 @@ class PersonalData extends Component {
     showModal: false,
   };
 
+  handleSomething = () => {
+    console.log('hey');
+  }
+
   handleSubmit = (event) => {
     event.preventDefault();
 
