@@ -55,6 +55,7 @@ class PersonalData extends Component {
 
     setTimeout(() => {
       this.setState({ showModal: false });
+      this.props.history.push('/main');
     }, 3000);
   };
 
@@ -81,12 +82,7 @@ class PersonalData extends Component {
         break;
     }
 
-    this.setState(
-      {
-        [name]: value,
-      },
-      console.log('state: ', this.state, name, value)
-    );
+    this.setState({ [name]: value });
   };
 
   handleCheck = (event) => {
@@ -118,7 +114,7 @@ class PersonalData extends Component {
           <Modal message="Zapisano" />
         </CSSTransition>
 
-        <Header mainText={'Mój profil'} subText={'Something'} goBack />
+        <Header mainText={'Mój profil'} subText={'Something'} />
         <form
           className="personal-data"
           onSubmit={this.handleSubmit}
