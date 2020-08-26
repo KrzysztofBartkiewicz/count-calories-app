@@ -98,13 +98,17 @@ class PersonalData extends Component {
 
     setTimeout(() => {
       this.setState({ showModal: false });
+<<<<<<< HEAD
       this.props.history.push('/main');
+=======
+>>>>>>> 9248c6dc4889dc71611c15c5e48e704c4eafd39a
     }, 3000);
   };
 
   handleChange = (event, index) => {
     const { name, value } = event.target;
 
+<<<<<<< HEAD
     this.setState((prevState) => {
       prevState.numberInputs[index].value = value;
 
@@ -116,6 +120,28 @@ class PersonalData extends Component {
 
       return prevState;
     });
+=======
+    switch (name) {
+      case 'age':
+        reg.age.test(value)
+          ? this.setState({ ageWarn: '' })
+          : this.setState({ ageWarn: '14 - 100 lat' });
+        break;
+      case 'weight':
+        reg.weight.test(value)
+          ? this.setState({ weightWarn: '' })
+          : this.setState({ weightWarn: '40 - 200 kg' });
+        break;
+      case 'height':
+        reg.height.test(value)
+          ? this.setState({ heightWarn: '' })
+          : this.setState({ heightWarn: '120 - 220 cm' });
+        break;
+      default:
+        break;
+    }
+    this.setState({ [name]: value });
+>>>>>>> 9248c6dc4889dc71611c15c5e48e704c4eafd39a
   };
 
   handleCheck = (event, index) => {
@@ -142,13 +168,18 @@ class PersonalData extends Component {
           <Modal message="Zapisano" />
         </CSSTransition>
 
+<<<<<<< HEAD
         <Header mainText={'Mój profil'} subText={'Something'} />
+=======
+        <Header mainText={'Mój profil'} subText={'Something'} goBack />
+>>>>>>> 9248c6dc4889dc71611c15c5e48e704c4eafd39a
         <form
           className="personal-data"
           onSubmit={this.handleSubmit}
           autoComplete="off"
         >
           <DataSection heading={<Heading>{'Płeć'}</Heading>}>
+<<<<<<< HEAD
             {this.state.genderCheckboxes.map((checkbox, index) => (
               <CustomCheckbox
                 key={checkbox.id}
@@ -177,6 +208,66 @@ class PersonalData extends Component {
               />
             </DataSection>
           ))}
+=======
+            <CustomCheckbox
+              checked={gender === 'female'}
+              onChange={this.handleCheck}
+              id="female"
+              type="radio"
+              name="gender"
+            >
+              {'Kobieta'}
+            </CustomCheckbox>
+            <CustomCheckbox
+              checked={gender === 'male'}
+              onChange={this.handleCheck}
+              id="male"
+              type="radio"
+              name="gender"
+            >
+              {'Mężczyzna'}
+            </CustomCheckbox>
+          </DataSection>
+
+          <DataSection
+            heading={<Heading>{'Wiek'}</Heading>}
+            bottomText={ageWarn}
+          >
+            <CustomTextInput
+              value={age}
+              onChange={this.handleChange}
+              type="number"
+              name="age"
+              isIncorrect={ageWarn}
+            />
+          </DataSection>
+
+          <DataSection
+            heading={<Heading>{'Waga (kg)'}</Heading>}
+            bottomText={weightWarn}
+          >
+            <CustomTextInput
+              value={weight}
+              onChange={this.handleChange}
+              type="number"
+              name="weight"
+              isIncorrect={weightWarn}
+            />
+          </DataSection>
+
+          <DataSection
+            heading={<Heading>{'Wzrost (cm)'}</Heading>}
+            bottomText={heightWarn}
+          >
+            <CustomTextInput
+              value={height}
+              onChange={this.handleChange}
+              type="number"
+              name="height"
+              isIncorrect={heightWarn}
+            />
+          </DataSection>
+>>>>>>> 9248c6dc4889dc71611c15c5e48e704c4eafd39a
 
           <DataSection heading={<Heading>{'Aktywność'}</Heading>}>
             {this.state.activityCheckboxes.map((checkbox, index) => (
